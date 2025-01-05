@@ -19,4 +19,6 @@ public class SwaggerConfig {
                         .description("API documentation for Product Service")
                         .license(new License().name("Apache 2.0").url("http://springdoc.org")));
     }//http://localhost:8081/swagger-ui.html
+
+    // test rupali
 }
