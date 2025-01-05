@@ -79,4 +79,16 @@ public class ProductController {
         return productService.deleteProduct(id) ? new ResponseEntity<>(HttpStatus.NO_CONTENT)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+    @GetMapping("/name/{name}")
+    @Operation(summary = "Get product name")
+    @ApiResponse(responseCode = "200" ,description = "List of product name")
+    public ResponseEntity<List<Product>> getProductsByName(@PathVariable String name) {
+        List<Product> products = productService.getProductByName(name);
+
+        if (products.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(products);
+    }
 }
