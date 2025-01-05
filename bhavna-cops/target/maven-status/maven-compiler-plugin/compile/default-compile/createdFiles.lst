@@ -1,0 +1,6 @@
+product\service\repository\ProductRepository.class
+product\service\controller\ProductController.class
+product\service\config\SwaggerConfig.class
+product\service\ProductServiceApplication.class
+product\service\service\ProductService.class
+product\service\entity\Product.class
